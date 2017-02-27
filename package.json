@@ -4,8 +4,9 @@
   "description": "Starter for Angular + ES6 + (Webpack or JSPM)",
   "main": "index.js",
   "dependencies": {
-    "angular": "^1.5.0",
-    "angular-ui-router": "^1.0.0-beta.1",
+    "angular": "^1.6.2",
+    "angular-ui-router": "^1.0.0-rc.1",
+    "jquery": "^3.1.1",
     "normalize.css": "^3.0.3"
   },
   "devDependencies": {
@@ -18,6 +19,8 @@
     "babel-preset-stage-0": "^6.5.0",
     "babel-register": "^6.7.2",
     "babel-runtime": "^6.6.1",
+    "bootstrap": "^3.3.7",
+    "bootstrap-sass": "^3.3.7",
     "browser-sync": "^2.11.1",
     "chai": "^3.4.0",
     "connect-history-api-fallback": "^1.1.0",

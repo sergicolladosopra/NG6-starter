@@ -1,7 +1,8 @@
 @import "common/common";
 
+$bootstrap-sass-asset-helper: true;
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
 .app {
-  height: 100%;
-  background-color: $lightBgColor;
 }
 
