@@ -19,4 +19,7 @@ angular.module('app', [
     $locationProvider.html5Mode(true).hashPrefix('!');
   })
 
+  //.config(($stateProvider) => {
+
+  //})
   .component('app', AppComponent);
