@@ -6,11 +6,17 @@ import TestComponentTemplate from './testComponent.html';
 describe('TestComponent', () => {
   let $rootScope, makeController;
 
+  class serviceMock {
+    get(){
+        return { testLabel: 'testdata'}
+    }
+  }
+
   beforeEach(window.module(TestComponentModule));
   beforeEach(inject((_$rootScope_) => {
     $rootScope = _$rootScope_;
     makeController = () => {
-      return new TestComponentController();
+      return new TestComponentController(new serviceMock());
     };
   }));
 
@@ -20,15 +26,13 @@ describe('TestComponent', () => {
 
   describe('Controller', () => {
     // controller specs
-    it('has a name property [REMOVE]', () => { // erase if removing this.name from the controller
+    it('has a name property testComponent', () => { // erase if removing this.name from the controller
       let controller = makeController();
       expect(controller).to.have.property('name');
     });
   });
 
   describe('Template', () => {
-    // template specs
-    // tip: use regex to ensure correct bindings are used e.g., {{  }}
     it('has name in template [REMOVE]', () => {
       expect(TestComponentTemplate).to.match(/{{\s?\$ctrl\.name\s?}}/g);
     });

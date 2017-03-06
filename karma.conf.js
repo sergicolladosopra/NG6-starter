@@ -19,7 +19,8 @@ module.exports = function (config) {
       require("karma-mocha"),
       require("karma-mocha-reporter"),
       require("karma-sourcemap-loader"),
-      require("karma-webpack")
+      require("karma-webpack"),
+      require("karma-phantomjs-launcher")
     ],
 
     // preprocess matching files before serving them to the browser
@@ -61,8 +62,6 @@ module.exports = function (config) {
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: ['Chrome'],
-
-    // if true, Karma runs tests once and exits
     singleRun: true
   });
 };

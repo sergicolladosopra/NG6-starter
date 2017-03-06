@@ -37,6 +37,7 @@
     "karma-chrome-launcher": "^0.2.0",
     "karma-mocha": "^0.2.0",
     "karma-mocha-reporter": "^1.0.2",
+    "karma-phantomjs-launcher": "^1.0.2",
     "karma-sourcemap-loader": "^0.3.4",
     "karma-webpack": "^1.5.1",
     "lodash": "^4.11.1",
@@ -60,8 +61,10 @@
     "serve": "gulp serve",
     "start": "gulp serve",
     "test": "karma start",
+    "testHeadless": "karma start --browsers PhantomJS",
     "watch": "gulp serve",
-    "webpack": "gulp webpack"
+    "webpack": "gulp webpack",
+    "deploy": "gulp webpack && aws s3 sync dist s3://process.env.s3"
   },
   "keywords": [
     "angular",
